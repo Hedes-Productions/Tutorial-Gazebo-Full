@@ -5,10 +5,5 @@
     <world name="robot_world">
 
         <!--Start from here -->
-        <!-- Set the physics engine parameters -->
-        <physics name="1ms" type="ignored">
-            <max_step_size>0.001</max_step_size> <!-- 1ms -->
-            <real_time_factor>1.0</real_time_factor> <!-- run in real time -->
-        </physics>
     </world>
 </sdf>
