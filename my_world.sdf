@@ -1,0 +1,10 @@
+<?xml version="1.0" ?> <!-- xml declaration -->
+<!-- SDF version -->
+<sdf version="1.8">
+    <!-- The world file that includes the diff drive robot model -->
+    <world name="robot_world">
+
+        <!--Start from here -->
+
+    </world>
+</sdf>
