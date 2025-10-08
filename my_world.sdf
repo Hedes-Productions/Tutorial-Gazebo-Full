@@ -9,5 +9,24 @@
             <max_step_size>0.001</max_step_size> <!-- 1ms -->
             <real_time_factor>1.0</real_time_factor> <!-- run in real time -->
         </physics>
+
+
+        <!-- Physics plugin: runs the physics engine (gravity, collisions, dynamics) -->
+        <plugin
+            filename="libignition-gazebo-physics-system.so"
+            name="ignition::gazebo::systems::Physics">
+        </plugin>
+
+        <!-- User commands plugin: allows inserting, deleting, or moving models in the simulation -->
+        <plugin
+            filename="libignition-gazebo-user-commands-system.so"
+            name="ignition::gazebo::systems::UserCommands">
+        </plugin>
+
+        <!-- Scene broadcaster plugin: streams world state to the GUI for 3D visualization -->
+        <plugin
+            filename="libignition-gazebo-scene-broadcaster-system.so"
+            name="ignition::gazebo::systems::SceneBroadcaster">
+        </plugin>
     </world>
 </sdf>
