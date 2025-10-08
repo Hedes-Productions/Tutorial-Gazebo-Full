@@ -90,6 +90,8 @@
             </output>
         </plugin>
 
+        <!-- ign topic -e -t /keyboard/keypress -->
+
         <!-- Include the diff drive robot model -->
         <include>
             <uri>file://diff-robot.sdf</uri>
