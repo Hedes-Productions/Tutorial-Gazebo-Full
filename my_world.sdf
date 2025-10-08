@@ -78,5 +78,10 @@
                 </visual>
             </link>
         </model>
+
+        <!-- Include the diff drive robot model -->
+        <include>
+            <uri>file://diff-robot.sdf</uri>
+        </include>
     </world>
 </sdf>
