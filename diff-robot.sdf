@@ -221,6 +221,18 @@
             <!-- Ball joints don’t need axis or limits -->
         </joint>
 
+        <!-- ===================== DiffDrive Plugin ===================== -->
+        <!-- Converts velocity commands (cmd_vel) into wheel motion and publishes odometry -->
+        <plugin
+            filename="libignition-gazebo-diff-drive-system.so"
+            name="ignition::gazebo::systems::DiffDrive">
+            <left_joint>left_wheel_joint</left_joint> <!-- Left wheel joint -->
+            <right_joint>right_wheel_joint</right_joint> <!-- Right wheel joint -->
+            <wheel_separation>1.2</wheel_separation> <!-- Distance between left & right wheels -->
+            <wheel_radius>0.4</wheel_radius> <!-- Radius of wheels -->
+            <odom_publish_frequency>1</odom_publish_frequency> <!-- Odometry publish rate [Hz] -->
+            <topic>cmd_vel</topic> <!-- ROS-like topic for velocity commands -->
+        </plugin>
        
 
     </model>
