@@ -167,8 +167,8 @@
                     </sphere>
                 </geometry>
                 <material>
-                    <ambient>1.0 0.0 0.0 1</ambient>
-                    <diffuse>1 0 0 1</diffuse>
+                    <ambient>0.0 0.0 0.0 1</ambient>
+                    <diffuse>0 0 0 1</diffuse>
                     <specular>0 0 0 0</specular>
                 </material>
             </visual>
@@ -182,6 +182,44 @@
                 </geometry>
             </collision>
         </link>
+
+
+        <!-- ===================== Joints ===================== -->
+        <!-- Revolute joint: chassis ↔ left wheel -->
+        <joint name='left_wheel_joint' type='revolute'>
+            <pose relative_to='left_wheel'/>
+            <parent>chassis</parent> <!-- Parent link -->
+            <child>left_wheel</child> <!-- Child link -->
+            <axis>
+                <xyz expressed_in='__model__'>0 1 0</xyz>
+                <!-- Rotation limits (effectively ±infinity) -->
+                <limit>
+                    <lower>-1.79769e+308</lower>
+                    <upper>1.79769e+308</upper>
+                </limit>
+            </axis>
+        </joint>
+
+        <!-- Revolute joint: chassis ↔ right wheel -->
+        <joint name='right_wheel_joint' type='revolute'>
+            <pose relative_to='right_wheel'/>
+            <parent>chassis</parent>
+            <child>right_wheel</child>
+            <axis>
+                <xyz expressed_in='__model__'>0 1 0</xyz>
+                <limit>
+                    <lower>-1.79769e+308</lower>
+                    <upper>1.79769e+308</upper>
+                </limit>
+            </axis>
+        </joint>
+
+        <!-- Ball joint: chassis ↔ caster wheel -->
+        <joint name='caster_wheel' type='ball'>
+            <parent>chassis</parent>
+            <child>caster</child>
+            <!-- Ball joints don’t need axis or limits -->
+        </joint>
 
        
 
