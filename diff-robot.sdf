@@ -251,6 +251,9 @@
             name="ignition::gazebo::systems::Imu">
         </plugin>
 
+        <!-- To check the available topic lists -> ign topic -l -->
+        <!-- To get the imu data from the topic -> ign topic -e -t /imu -->
+
 
     </model>
 </sdf>
