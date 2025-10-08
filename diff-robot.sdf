@@ -233,6 +233,9 @@
             <odom_publish_frequency>1</odom_publish_frequency> <!-- Odometry publish rate [Hz] -->
             <topic>cmd_vel</topic> <!-- ROS-like topic for velocity commands -->
         </plugin>
+
+        <!-- ign topic -t "/cmd_vel" -m ignition.msgs.Twist -p "linear: {x: -0.2}, angular: {z: -0.08}" -->
+
        
 
     </model>
