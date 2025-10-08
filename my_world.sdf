@@ -44,5 +44,39 @@
             </attenuation>
             <direction>-0.5 0.1 -0.9</direction> <!-- direction of the light rays -->
         </light>
+
+
+        <!-- Ground plane model -->
+        <model name="ground_plane">
+            <static>true</static> <!-- ground plane is static -->
+            <!-- Link for the ground plane -->
+            <link name="link">
+                <!-- collision properties -->
+                <collision name="collision">
+                    <!-- Geometry of the ground plane -->
+                    <geometry>
+                        <plane>
+                        <normal>0 0 1</normal> <!-- normal vector pointing up -->
+                        <size>100 100</size> <!-- size of the ground plane -->
+                        </plane>
+                    </geometry>
+                </collision>
+                <!-- Visual properties of the ground plane -->
+                <visual name="visual">
+                    <geometry>
+                        <plane>
+                            <normal>0 0 1</normal>
+                            <size>100 100</size>
+                        </plane>
+                    </geometry>
+                    <!-- Material properties for the ground plane -->
+                    <material>
+                        <ambient>1 1 1 1</ambient>
+                        <diffuse>1 1 1 1</diffuse>
+                        <specular>1 1 1 1</specular>
+                    </material>
+                </visual>
+            </link>
+        </model>
     </world>
 </sdf>
