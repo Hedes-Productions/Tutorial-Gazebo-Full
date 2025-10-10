@@ -91,3 +91,8 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+# To make the python script as  a executable = chmod +x go2pos.py
+# To run the python script = python3 go2pos.py 
